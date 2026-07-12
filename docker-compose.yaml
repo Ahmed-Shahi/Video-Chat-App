@@ -1,0 +1,16 @@
+services:
+  backend:
+    container_name: server
+    build:
+      context: ./Server
+    ports:
+      - 88:8000
+
+  frontend:
+    container_name: client
+    build:
+      context: ./Client
+    ports:
+      - 80:80
+    depends_on:
+      - backend
