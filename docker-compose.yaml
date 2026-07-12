@@ -4,7 +4,7 @@ services:
     build:
       context: ./Server
     ports:
-      - 88:8000
+      - 8000:8000
 
   frontend:
     container_name: client
