@@ -1,8 +1,5 @@
 node_modules
 dist
-build
+.env
+README.md
 .git
-.gitignore
-npm-debug.log
-dockerfile
-.dockerignore
