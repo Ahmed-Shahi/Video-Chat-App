@@ -4,3 +4,5 @@ build
 .git
 .gitignore
 npm-debug.log
+dockerfile
+.dockerignore
