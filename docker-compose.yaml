@@ -5,7 +5,13 @@ services:
       context: ./Server
     ports:
       - 8000:8000
-
+    healthcheck:
+      test: ["CMD", "node", "./healthCheck.js"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    
   frontend:
     container_name: client
     build:
