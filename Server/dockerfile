@@ -7,12 +7,12 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
+# Install dependencies
+RUN npm install
 
 # Copy the rest of the project
 COPY . .
 
-# Install dependencies
-RUN npm install
 
 # Expose the backend port
 EXPOSE 8000
