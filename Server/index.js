@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
 
 const io = new Server(server, { cors: true }, console.log("Server is running on port 8000"))
 
-io.o("connection", (socket) => {
+io.on("connection", (socket) => {
     // exports {SocketProvider,useSocket}
 
     console.log("User", socket.id, Date());
